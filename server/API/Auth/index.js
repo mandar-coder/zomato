@@ -5,6 +5,9 @@ import passport from 'passport';
 // Models
 import { UserModel } from  "../../database/allModels";
 
+//validation
+import { ValidateSignup, ValidateSignin } from '../../validation/auth';
+
 const Router = express.Router();
 
 /*
@@ -15,7 +18,8 @@ Access          Public
 Method          POST
 */
 Router.post("/signup", async (req,res) => {
-    try{ 
+    try{
+        await ValidateSignup(req.body.credentials); 
         await UserModel.findByEmailAndPhone(req.body.credentials);
         const newUser = await UserModel.create(req.body.credentials);
         const token = newUser.generateJwtToken();
@@ -34,6 +38,7 @@ Method          POST
 */
 Router.post('/signin', async (req,res) => {
     try{
+        await ValidateSignin(req.body.credentials);
         const user = await UserModel.findByEmailAndPassword(req.body.credentials);
 
         const token = user.generateJwtToken();
@@ -46,7 +51,7 @@ Router.post('/signin', async (req,res) => {
 
 /*
 Route           /auth/google
-Desc            sign with email and password
+Desc            route for google authentication
 Params          none
 Access          Public
 Method          POST
@@ -63,7 +68,7 @@ Router.get(
 
 /*
 Route           /auth/google
-Desc            sign with email and password
+Desc            google callback function
 Params          none
 Access          Public
 Method          POST
