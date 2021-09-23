@@ -51,7 +51,10 @@ zomato.use("/user", User);
 zomato.listen(4000, () =>
     ConnectDB()
         .then(() => console.log("Server is up and running"))
-        .catch(() =>
-            console.log("Server is running, but database connection failed ...")
-        )
+        .catch((error) => {
+            console.log(error);
+            console.log(
+                "Server is running, but database connection failed ..."
+            );
+        })
 );
