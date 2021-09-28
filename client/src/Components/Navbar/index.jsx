@@ -129,10 +129,8 @@ function LargeNav({ user, isDropdownOpen, setIsDropdownOpen }) {
 
 function Navbar() {
   const [user, setUser] = useState(null);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // {
-  //   name: "",
-  // }
+  const [isDropdownOpen, setIsDropdownOpen] = useState({name: ""});
+
   return (
     <>
       <nav className="p-4 flex bg-white shadow-md lg:shadow-none w-full items-center">

@@ -1,11 +1,16 @@
-import React from 'react'
+import React from 'react';
+import { useParams } from "react-router-dom";
+import Delivery  from './Delivery';
+import Brand from './Delivery/Brand';
 
-function temp() {
+function Temp() {
+    const { type } = useParams();
     return (
-        <div>
-            Home page main content
-        </div>
+        <div className= " my-5"> 
+         { type === "delivery" && <Brand />}
+        { type === "delivery" && <Delivery/>}
+         </div>
     )
 }
 
-export default temp;
+export default Temp;
