@@ -12,6 +12,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Redirect, Route } from "react-router";
 import Overview from "./pages/Overview";
+import OrderOnline from "./pages/OrderOnline";
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <Redirect to="/delivery" />
     </Route>
     <HomeLayoutHOC path="/:type" exact component={Home} />
-    <RestaurantLayoutHOC path="/restaurant/:id" exact component={Temp} />
+    <RestaurantLayoutHOC path="/restaurant/:id" exact component={Overview} />
     <RestaurantLayoutHOC
       path="/restaurant/:id/overview"
       exact
@@ -30,7 +31,7 @@ function App() {
     <RestaurantLayoutHOC
       path="/restaurant/:id/order-online"
       exact
-      // component={OrderOnline}
+      component={OrderOnline}
     />
     <RestaurantLayoutHOC path="/restaurant/:id/menu" exact component={Temp} />
     <RestaurantLayoutHOC
