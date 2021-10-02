@@ -9,7 +9,7 @@ import { NextArrow, PrevArrow } from "../Components/CarouselArrows";
 import MenuCollection from "../Components/Restaurant/MenuCollection";
 import MenuSimilarRestaurantCard from "../Components/Restaurant/MenuSimilarRestaurantCard";
 import ReviewCard from "../Components/Restaurant/ReviewCard";
-
+import MapView from "../Components/Restaurant/Mapview";
 
 function Overview() {
   const { id } = useParams();
@@ -153,7 +153,14 @@ function Overview() {
               </Slider>
             </div>
           </div>
-          
+          <div className="my-4 w-full md:hidden flex flex-col gap-4">
+            <MapView
+              title="McDonald's"
+              phno="+919899795815"
+              mapLocation={[28.6812933768556, 77.20791895432784]}
+              address="41, Block UA, Jawahar Nagar, Bungalow Road, Near Kamla Nagar, New Delhi"
+            />
+          </div>
           <div className="mb-4 mt-8">
             <h4 className="text-lg font-medium">
               Rate your delivery experience
@@ -169,7 +176,17 @@ function Overview() {
             ))}
           </div>
         </div>
-       
+        <aside
+          style={{ height: "fit-content" }}
+          className="hidden md:flex md:w-4/12 sticky rounded-xl top-2 bg-white p-5 shadow-md flex-col gap-4"
+        >
+          <MapView
+            title="McDonald's"
+            phno="+919899795815"
+            mapLocation={[28.6812933768556, 77.20791895432784]}
+            address="41, Block UA, Jawahar Nagar, Bungalow Road, Near Kamla Nagar, New Delhi"
+          />
+        </aside>
       </div>
     </>
   );

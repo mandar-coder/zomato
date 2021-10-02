@@ -12,3 +12,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.leaflet-container {
+  width: inherit;
+  height: inherit;
+}
+
