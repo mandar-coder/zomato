@@ -14,6 +14,8 @@ import { Redirect, Route } from "react-router";
 import Overview from "./pages/Overview";
 import OrderOnline from "./pages/OrderOnline";
 import Reviews from "./pages/Reviews";
+import Menu from "./pages/Menu";
+import Photos from "./pages/Photos";
 
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
       exact
       component={OrderOnline}
     />
-    <RestaurantLayoutHOC path="/restaurant/:id/menu" exact component={Temp} />
+    <RestaurantLayoutHOC path="/restaurant/:id/menu" exact component={Menu} />
     <RestaurantLayoutHOC
       path="/restaurant/:id/reviews"
       exact
@@ -43,7 +45,7 @@ function App() {
     <RestaurantLayoutHOC
       path="/restaurant/:id/photos"
       exact
-      component={Temp}
+      component={Photos}
     />
   </div>
   );
