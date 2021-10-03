@@ -13,6 +13,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Redirect, Route } from "react-router";
 import Overview from "./pages/Overview";
 import OrderOnline from "./pages/OrderOnline";
+import Reviews from "./pages/Reviews";
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
     <RestaurantLayoutHOC
       path="/restaurant/:id/reviews"
       exact
-      component={Temp}
+      component={ Reviews }
     />
     <RestaurantLayoutHOC
       path="/restaurant/:id/photos"
