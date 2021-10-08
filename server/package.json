@@ -1,7 +1,7 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
+  "description": "-Auth -Foods -Restaurants -Menu -Order -Payments -> razorpay -Reviews -User -Images",
   "main": "index.js",
   "scripts": {
     "start": "babel-node index",
