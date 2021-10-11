@@ -63,14 +63,14 @@ function CartContainer() {
       image:
         "https://b.zmtcdn.com/data/dish_photos/87c/153beb91af9f43e157f3d6fd6ea2587c.jpg?output-format=webp",
       name: "Chilli Paneer Gravy",
-      price: "157.50",
+      price: "149.50",
       quantity: 4,
     },
     {
       image:
         "https://b.zmtcdn.com/data/dish_photos/87c/153beb91af9f43e157f3d6fd6ea2587c.jpg?output-format=webp",
       name: "Chilli Paneer Gravy",
-      price: "157.50",
+      price: "149.50",
       quantity: 2,
     },
   ]);
