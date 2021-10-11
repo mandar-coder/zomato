@@ -16,6 +16,8 @@ import OrderOnline from "./pages/OrderOnline";
 import Reviews from "./pages/Reviews";
 import Menu from "./pages/Menu";
 import Photos from "./pages/Photos";
+import Checkout from "./pages/Checkout";
+import CheckoutLayoutHOC from "./HOC/Checkout.HOC";
 
 
 function App() {
@@ -47,6 +49,7 @@ function App() {
       exact
       component={Photos}
     />
+    <CheckoutLayoutHOC path="/checkout/orders" exact component={Checkout} />
   </div>
   );
 }
